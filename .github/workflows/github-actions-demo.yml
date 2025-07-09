@@ -8,3 +8,8 @@ jobs:
         run: echo "Hello world"
       - name: Print goodbye
         run: echo "Done - Good Bye!"
+      - name: Print Details
+        run: |
+          echo "My name is Mac"
+          echo "I am learning github actions"
+
