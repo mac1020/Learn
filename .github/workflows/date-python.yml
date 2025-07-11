@@ -11,5 +11,5 @@ jobs:
         with:
           python-version: '3.11' 
       - name: run python code
-        run: python date.py
+        run: python python/date.py
       
