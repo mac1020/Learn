@@ -1,0 +1,15 @@
+name: Current Date Time in UTC
+on: workflow_dispatch
+jobs:
+  job1:
+    runs_on: ubuntu-latest
+    steps:
+      - name: checkout to repo
+        uses: actions/checkout@v3
+      - name: setup python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11' 
+      - name: run python code
+        run: python date.py
+      
