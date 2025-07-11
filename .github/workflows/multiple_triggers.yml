@@ -1,0 +1,12 @@
+name: mutiple triggers
+on: [push,workflow_dispatch]
+jobs:
+    on_push:
+        runs-on: ubuntu-latest
+        steps:
+            - name: checkout repo
+              uses: actions/checkout@v3
+            - name: execute permission
+              run: chmod +x shell/on_push.sh
+            - name: run on_push.sh
+              run: shell/on_push.sh
