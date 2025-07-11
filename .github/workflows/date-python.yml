@@ -2,7 +2,7 @@ name: Current Date Time in UTC
 on: workflow_dispatch
 jobs:
   job1:
-    runs_on: ubuntu-latest
+    runs-on: ubuntu-latest
     steps:
       - name: checkout to repo
         uses: actions/checkout@v3
