@@ -1,7 +1,7 @@
 name: mutiple triggers
 on: [push,workflow_dispatch]
 jobs:
-    on_push:
+    first:
         runs-on: ubuntu-latest
         steps:
             - name: checkout repo
@@ -10,3 +10,8 @@ jobs:
               run: chmod +x shell/on_push.sh
             - name: run on_push.sh
               run: shell/on_push.sh
+    second:
+        runs-on: ubuntu-latest
+        steps:
+            - name: print github metadata
+              run: echo "${{toJson(github)}}"
