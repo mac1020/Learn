@@ -1,2 +1,2 @@
 echo "running first script"
-exit 0
+exit 1
