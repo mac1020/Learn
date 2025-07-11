@@ -1,0 +1,18 @@
+name: Run on Issue Events
+
+on:
+  issues:
+    types: [opened, edited, closed]
+
+jobs:
+  issue-logger:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Log issue details
+        run: |
+          echo "📝 Issue Event Triggered"
+          echo "Title: ${{ github.event.issue.title }}"
+          echo "Body: ${{ github.event.issue.body }}"
+          echo "Action: ${{ github.event.action }}"
+          echo "Created by: ${{ github.actor }}"
