@@ -1,0 +1,21 @@
+name: sequencial jobs
+on: workflow_dispatch
+jobs:
+ first_job:
+    runs-on: ubuntu-latest
+    steps:
+        - name: checkout to repo
+          uses: actions/checkout@v3
+        - name: execute permission
+          run: chmod +x shell/first.sh
+        - name: run first.sh
+          run: shell/first.sh
+ second_job:
+    runs-on: ubuntu-latest
+    steps:
+        - name: checkout to repo
+          uses: actions/checkout@v3
+        - name: execute permission
+          run: chmod +x shell/second.sh
+        - name: run second.sh
+          run: shell/second.sh        
