@@ -10,5 +10,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: push filter
-        echo "Code changes detected in workflows"
+        run: echo "Code changes detected in workflows"
 
