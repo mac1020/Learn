@@ -1,8 +1,9 @@
 name: PR VAlidation
-on: [pull_request]
+on: 
+  pull_request
 jobs:
   check-pr:
     runs-on: ubuntu-latest
     steps:
       - name: check
-        run: echo"Pull Request triggered"
+        run: echo "Pull Request triggered"
