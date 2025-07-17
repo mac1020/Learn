@@ -10,6 +10,7 @@ jobs:
               run: chmod +x shell/on_push.sh
             - name: run on_push.sh
               run: shell/on_push.sh
+              # just for testing.....
     second:
         runs-on: ubuntu-latest
         steps:
