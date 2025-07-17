@@ -25,3 +25,4 @@ jobs:
                 path: ./downloaded/
             - name: print artifact
               run: cat ./downloaded/build.txt
+            #   learningggg.....cancel-timeout-minutes: 7
