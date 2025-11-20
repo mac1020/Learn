@@ -5,7 +5,7 @@ on:
     branches:
       - main
     paths:
-      - 'terraform/Practice/**'
+      - 'terraform/**'
 
 jobs:
   terraform-apply:
@@ -27,7 +27,7 @@ jobs:
         uses: hashicorp/setup-terraform@v2
 
       - name: Terraform Init
-        run: cd terraform && terraform init -input=false
+        run: cd terraform/Practice && terraform init -input=false
 
       - name: Terraform Apply
-        run: cd terraform && terraform apply -auto-approve
+        run: cd terraform/Practice && terraform apply -auto-approve
