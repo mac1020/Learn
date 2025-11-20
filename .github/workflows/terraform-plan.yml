@@ -3,9 +3,9 @@ name: "Terraform Plan"
 on:
   pull_request:
     branches:
-        - main
+        - master
     paths:
-      - 'terraform/Practice/**'
+      - 'terraform/**'
 
 jobs:
   terraform-plan:
