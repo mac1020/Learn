@@ -27,4 +27,3 @@ module "storage" {
   account_tier          = "Standard"
   replication_type      = "LRS"
 }
-//storage
