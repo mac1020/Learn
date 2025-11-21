@@ -29,6 +29,10 @@ jobs:
       - name: Terraform Validate
         run: cd terraform/Practice && terraform validate
 
+      - name: Test Azure Login
+        run: az account show
+
+
       - name: Terraform Plan
         id: plan
         run: |
