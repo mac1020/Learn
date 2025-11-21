@@ -56,7 +56,7 @@ jobs:
           subject: "Terraform Plan Output"
           to: "kush20mehak@gmail.com"
           from: "Terraform Bot <${{ secrets.EMAIL_USER }}>"
-          secure: true
+          secure: false
           attachments: terraform/Practice/plan.txt
           body: |
             Hello,
