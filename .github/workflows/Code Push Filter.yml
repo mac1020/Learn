@@ -1,14 +1,14 @@
-name: Code Push Filter
-on:
-  push:
-    branches:
-      - master
-    paths:
-      - '.github/workflows/*'
-jobs:
-  filter:
-    runs-on: ubuntu-latest
-    steps:
-      - name: push filter
-        run: echo "Code changes detected in workflows"
+# name: Code Push Filter
+# on:
+#   push:
+#     branches:
+#       - master
+#     paths:
+#       - '.github/workflows/*'
+# jobs:
+#   filter:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - name: push filter
+#         run: echo "Code changes detected in workflows"
 
