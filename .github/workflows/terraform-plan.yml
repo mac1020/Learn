@@ -55,10 +55,14 @@ jobs:
           password: ${{ secrets.EMAIL_PASSWORD }}
           subject: "Terraform Plan Output"
           to: "kush20mehak@gmail.com"
-          from: "Terraform Bot <${{ secrets.EMAIL_USER }}>"
+          from: "Terraform Admin <${{ secrets.EMAIL_USER }}>"
           secure: false
           attachments: terraform/Practice/plan.txt
           body: |
-            Hello,
-            Please find attached the Terraform Plan generated in GitHub Actions.
-
+                Hello,
+              
+                Please find attached the Terraform Plan generated in GitHub Actions.
+                Please verify the plan before applying it.
+              
+                Regards,
+                Mac
