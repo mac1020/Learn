@@ -42,3 +42,8 @@ variable "storage_account_name" {
   description = "Name of the Storage Account"
   type        = string
 }
+
+variable "subscription_id" {} 
+variable "client_id" {} 
+variable "client_secret" {} 
+variable "tenant_id" {}
