@@ -1,0 +1,26 @@
+name: Debug All Issue Events
+
+on:
+  issues:
+    types:
+      - opened
+      - edited
+      - deleted
+      - closed
+      - reopened
+      - assigned
+      - unassigned
+      - labeled
+      - unlabeled
+      - milestoned
+      - demilestoned
+
+jobs:
+  dump-issue-json:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Dump entire issue payload
+        run: |
+          echo "📦 Full Issue Event Payload:"
+          echo ${{ toJson(github.event) }}
