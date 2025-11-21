@@ -43,11 +43,26 @@ jobs:
         id: plan
         run: |
           cd terraform/Practice
-          terraform plan -no-color -out=tfplan
-          terraform show -no-color tfplan > plan.txt
+          terraform plan -out=tfplan
+          terraform show tfplan > plan.txt
 
-      - name: Upload Plan as Artifact
-        uses: actions/upload-artifact@v4
+      - name: Send Terraform Plan via Email
+        uses: dawidd6/action-send-mail@v3
         with:
-          name: tfplan
-          path: terraform/Practice/plan.txt
+          server_address: smtp.gmail.com
+          server_port: 587
+          username: ${{ secrets.EMAIL_USER }}
+          password: ${{ secrets.EMAIL_PASSWORD }}
+          subject: "Terraform Plan Output"
+          to: "kush20mehak@gmail.com"
+          from: "Terraform Admin <${{ secrets.EMAIL_USER }}>"
+          secure: false
+          attachments: terraform/Practice/plan.txt
+          body: |
+                Hello,
+              
+                Please find attached the Terraform Plan generated in GitHub Actions.
+                Please verify the plan before applying it.
+              
+                Regards,
+                Mac
