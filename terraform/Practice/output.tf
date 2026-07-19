@@ -44,3 +44,19 @@ output "storage_primary_connection_string" {
   value       = module.storage.primary_connection_string
   sensitive   = true
 }
+
+output "nic_name" {
+  value = azurerm_network_interface.nic.name
+}
+
+output "nic_id" {
+  value = azurerm_network_interface.nic.id
+}
+
+output "vm_name" {
+  value = azurerm_linux_virtual_machine.vm.name
+}
+
+output "vm_id" {
+  value = azurerm_linux_virtual_machine.vm.id
+}
