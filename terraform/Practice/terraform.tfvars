@@ -10,5 +10,3 @@ replication_type       = "LRS"
 nic_name = "agni-nic"
 admin_username = "azureuser"
 admin_password = "Pass@1234"
-
-//storage
