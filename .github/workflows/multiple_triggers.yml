@@ -1,18 +1,18 @@
-# name: mutiple triggers
-# on: [push,workflow_dispatch]
-# jobs:
-#     first:
-#         runs-on: ubuntu-latest
-#         steps:
-#             - name: checkout repo
-#               uses: actions/checkout@v3
-#             - name: execute permission
-#               run: chmod +x shell/on_push.sh
-#             - name: run on_push.sh
-#               run: shell/on_push.sh
-#               # just for testing.....
-#     second:
-#         runs-on: ubuntu-latest
-#         steps:
-#             - name: print github metadata
-#               run: echo "${{toJson(github)}}"
+name: mutiple triggers
+on: [push,workflow_dispatch]
+jobs:
+    first:
+        runs-on: ubuntu-latest
+        steps:
+            - name: checkout repo
+              uses: actions/checkout@v3
+            - name: execute permission
+              run: chmod +x shell/on_push.sh
+            - name: run on_push.sh
+              run: shell/on_push.sh
+              # just for testing.....
+    second:
+        runs-on: ubuntu-latest
+        steps:
+            - name: print github metadata
+              run: echo "${{toJson(github)}}"
