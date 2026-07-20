@@ -1,1 +1,0 @@
-{"Modules":[{"Key":"","Source":"","Dir":"."},{"Key":"VM","Source":"./modules/VM","Dir":"modules/VM"},{"Key":"nic","Source":"./modules/nic","Dir":"modules/nic"},{"Key":"storage","Source":"./modules/storage","Dir":"modules/storage"},{"Key":"subnet","Source":"./modules/subnet","Dir":"modules/subnet"},{"Key":"vnet","Source":"./modules/vnet","Dir":"modules/vnet"}]}
