@@ -9,6 +9,4 @@ account_tier           = "Standard"
 replication_type       = "LRS"
 nic_name = "agni-nic"
 admin_username = "azureuser"
-admin_password = "Pass@1234"
-
-//storage
+admin_password = "Pass@1235"
