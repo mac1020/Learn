@@ -42,3 +42,16 @@ variable "storage_account_name" {
   description = "Name of the Storage Account"
   type        = string
 }
+
+variable "nic_name" {
+  description = "Name of the nic"
+  type        = string
+}
+
+variable "admin_username" {
+  type = string
+}
+variable "admin_password" {
+  type      = string
+  sensitive = true
+}

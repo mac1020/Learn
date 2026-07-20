@@ -7,3 +7,8 @@ address_prefixes = [ "10.0.1.0/24", "10.0.2.0/24", "10.0.3.0/24"]
 storage_account_name   = "agnimystorageacc"
 account_tier           = "Standard"
 replication_type       = "LRS"
+nic_name = "agni-nic"
+admin_username = "azureuser"
+admin_password = "Pass@1234"
+
+//storage

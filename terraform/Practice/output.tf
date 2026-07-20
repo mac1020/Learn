@@ -44,3 +44,19 @@ output "storage_primary_connection_string" {
   value       = module.storage.primary_connection_string
   sensitive   = true
 }
+
+output "nic_name" {
+  value = module.nic.nic_name
+}
+
+output "nic_id" {
+  value = module.nic.nic_id
+}
+
+output "vm_name" {
+  value = module.VM.vm_name
+}
+
+output "vm_id" {
+  value = module.VM.vm_id
+}
