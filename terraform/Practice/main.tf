@@ -34,7 +34,7 @@ module "nic" {
   nic_name            = var.nic_name
   location            = azurerm_resource_group.rg.location
   resource_group_name = azurerm_resource_group.rg.name
-  subnet_id           = azurerm_subnet.subnet.id
+  subnet_id           = module.subnet.subnet_id
 }
 
 data "external" "vm_name" {
@@ -47,7 +47,7 @@ module "VM" {
   location            = azurerm_resource_group.rg.location
   resource_group_name = azurerm_resource_group.rg.name
   vm_size             = "Standard_B2s"
-  nic_id = azurerm_network_interface.nic.id
+  nic_id = module.nic.nic_id
   admin_username = var.admin_username
   admin_password = var.admin_password
 } 
