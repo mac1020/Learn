@@ -46,17 +46,17 @@ output "storage_primary_connection_string" {
 }
 
 output "nic_name" {
-  value = azurerm_network_interface.nic.name
+  value = module.nic.nic_name
 }
 
 output "nic_id" {
-  value = azurerm_network_interface.nic.id
+  value = module.nic.nic_id
 }
 
 output "vm_name" {
-  value = azurerm_linux_virtual_machine.vm.name
+  value = module.VM.vm_name
 }
 
 output "vm_id" {
-  value = azurerm_linux_virtual_machine.vm.id
+  value = module.VM.vm_id
 }
