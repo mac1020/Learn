@@ -3,4 +3,10 @@ variable "location" {}
 variable "resource_group_name" {}
 variable "vm_size" {}
 variable "nic_id" {}
-variable "public_key_path" {}
+variable "admin_username" {
+  type = string
+}
+variable "admin_password" {
+  type      = string
+  sensitive = true
+}
